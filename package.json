@@ -1,0 +1,38 @@
+{
+  "name": "simple-html-site",
+  "version": "1.0.0",
+  "description": "A simple fullstack search suggestion app",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "start": "node dist/node/index.js",
+    "dev": "concurrently \"sass --watch style.scss ./build/style.css\" \"tsc --watch\" \"serve -l 3000 ./dist/browser\"",
+    "build": "tsc && sass style.scss build/style.css",
+    "serve": "serve ."
+  },
+  "keywords": [
+    "search",
+    "suggestion",
+    "fullstack",
+    "typescript",
+    "scss"
+  ],
+  "author": "Molla",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.16",
+    "sass": "^1.49.9",
+    "serve": "^14.2.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.0.0"
+  }
+}
